@@ -1,0 +1,43 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  overflow: scroll;
+}
+button{
+  cursor: pointer;
+}
+#portofolio{
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px,1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2px;
+}
+.project{
+  position: relative;
+  background: #f2dad7;
+  overflow: hidden;
+}
+.project img{
+  position: absolute;
+  opacity: 0.9;
+}
+.project:hover .grid-overlay{
+  transform: translateY(0%);
+}
+
+.grid-overlay{
+  background: rgba(78, 84, 229, 0.91);
+  height: 100%;
+  grid-column: -1;
+  grid-row: -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  transform: translateY(101%);
+  transition: all 0.3s
+  ease-in-out;
+} 
